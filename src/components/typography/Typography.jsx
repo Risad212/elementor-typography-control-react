@@ -1,4 +1,5 @@
 import Fontfamily from '../fontfamily/fontFamily';
+import Fontsize from '../fontsize/Fontsize';
 import Fontstyle from '../fontstyle/Fontstyle';
 import Fontweight from '../fontweight/Fontweight';
 import Textdecoration from '../textdecoration/Textdecoration';
@@ -40,6 +41,8 @@ function typography() {
                     </div>
                     {/*------- font control ----------*/}
                     <Fontfamily />
+                    {/*------- font size control ----------*/}
+                    <Fontsize />
                     {/*------- font width control ----------*/}
                     <Fontweight />
                     {/*------- transform control ----------*/}

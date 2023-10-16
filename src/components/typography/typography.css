@@ -54,6 +54,7 @@
     margin: auto;
     margin-top: 15px;
     display: none;
+    border-radius: 3px;
 }
 
 .typography-control::before {
