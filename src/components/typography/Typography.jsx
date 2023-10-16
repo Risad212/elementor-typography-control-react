@@ -1,6 +1,9 @@
+import Fontfamily from '../fontfamily/fontFamily';
+import Fontstyle from '../fontstyle/Fontstyle';
+import Fontweight from '../fontweight/Fontweight';
+import Textdecoration from '../textdecoration/Textdecoration';
+import Transform from '../transform/Transform';
 import './typography.css';
-/*----- import all components -------*/
-
 
 
 function typography() {
@@ -15,6 +18,15 @@ function typography() {
                     </div>
                 </div>
                 {/*------- font control ----------*/}
+                <Fontfamily />
+               {/*------- font width control ----------*/}
+                <Fontweight />
+                {/*------- transform control ----------*/}
+                <Transform />
+                {/*------- font style control ----------*/}
+                <Fontstyle />
+                {/*------- text decoration control ----------*/}
+                 <Textdecoration />
             </div>
         </>
     )

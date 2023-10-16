@@ -3,6 +3,16 @@
     width: 300px;
     margin: auto;
     margin-top: 150px;
+    position: relative;
+}
+
+.typography-control::before{
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 22px;
+    border: 8px solid transparent;
+    border-block-end-color: #fff;
 }
 
 .typography-header{

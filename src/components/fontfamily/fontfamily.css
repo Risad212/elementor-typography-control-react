@@ -1,0 +1,28 @@
+.font-control-feild{
+    padding: 0 20px 15px;
+    display: flex;
+    align-items: center;
+    color: #515962;
+}
+
+.font-control-feild .font-title{
+    font-size: 12px;
+    color: #515962;
+    max-width: 60%;
+}
+.font-control-feild .wrap-select{
+    margin-inline-start: auto;
+}
+.font-control-feild .wrap-select{
+    max-width: 400px;
+    width: 52%;
+}
+.font-control-feild .wrap-select select{
+    max-width: 100%;
+    border-color: #d5d8dc;
+    height: 27px;
+    outline: none;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #515962;
+}
