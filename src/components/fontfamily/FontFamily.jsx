@@ -2391,7 +2391,7 @@ function Fontfamily() {
 
                         <option value="Road Rage" data-select2-id="1193">Road Rage</option>
 
-                        <option value="Roboto" data-select2-id="2" select>Roboto</option>
+                        <option value="Roboto" data-select2-id="2" selected>Roboto</option>
 
                         <option value="Roboto Condensed" data-select2-id="1194">Roboto Condensed</option>
 

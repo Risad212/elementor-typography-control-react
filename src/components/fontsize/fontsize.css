@@ -42,6 +42,7 @@
     display: flex;
 }
 
+/*------- Unites switcher --------*/
 .fontsize-control-feild .fontsize-head .right .units-switcher {
     display: flex;
     overflow: hidden;
@@ -54,17 +55,19 @@
     padding: 7px 8px;
     border-radius: 3px;
     transition: .15s;
-}
-
-.fontsize-control-feild .units-switcher .switch {
-    font-size: 10px;
-    margin-bottom: 15px;
-}
-.fontsize-control-feild .units-switcher .switch:last-child{
-    margin-bottom: 0;
+    height: 27px;
 }
 .showUnitSwhitch{
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    height: 155px !important;
+}
+.fontsize-control-feild .units-switcher .switch {
+    font-size: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.fontsize-control-feild .units-switcher .switch:last-child{
+    margin-bottom: 0;
 }
 .fontsize-control-feild .fontsize-title {
     font-size: 12px;

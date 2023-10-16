@@ -17,7 +17,7 @@ function Fontweight() {
 
                         <option value="500">500 (Medium)</option>
 
-                        <option value="600">600 (Semi Bold)</option>
+                        <option value="600" selected>600 (Semi Bold)</option>
 
                         <option value="700">700 (Bold)</option>
 

@@ -5,9 +5,9 @@ function Fontsize() {
     const showDeviceIcon = () => {
         isToggled = !isToggled;
         if (isToggled) {
-            document.querySelector('.icon-list').classList.add('showAllDeviceIcon')
+            document.querySelector('.units-switcher').classList.add('showUnitSwhitch')
         } else {
-            document.querySelector('.icon-list').classList.remove('showAllDeviceIcon')
+            document.querySelector('.units-switcher').classList.remove('showUnitSwhitch')
         }
     }
     return (
@@ -25,7 +25,9 @@ function Fontsize() {
                         </div>
                     </div>
                     <div className="right">
-                       <div className="units-switcher">
+                       <div className="units-switcher" onClick={() =>{
+                           showDeviceIcon()
+                       }}>
                           <span className='switch'>px</span>
                           <span className='switch'>em</span>
                           <span className='switch'>rem</span>
