@@ -1,12 +1,61 @@
-.typography-control{
-    box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+.main-control {
+    margin-top: 150px;
+}
+
+.main-control-wrap {
+    display: flex;
     width: 300px;
     margin: auto;
-    margin-top: 150px;
+    justify-content: space-between;
     position: relative;
 }
 
-.typography-control::before{
+.main-control-title {
+    font-size: 12px;
+}
+
+.main-control-icon {
+    display: flex;
+}
+
+.main-control-icon .icon {
+    width: 27px;
+    height: 27px;
+    border: 1px solid #d5d8dc;
+    border-inline-end: 0;
+    border-start-start-radius: 3px;
+    border-start-end-radius: 0;
+    border-end-start-radius: 3px;
+    border-end-end-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.main-control-icon .icon i {
+    font-size: 12px;
+}
+
+.main-control-icon .icon:nth-child(2) {
+    color: #0c0d0e;
+    background-color: #d5d8dc;
+    border-start-start-radius: 0px;
+    border-start-end-radius: 3px;
+    border-end-start-radius: 0px;
+    border-end-end-radius: 3px;
+}
+
+/*----- typography style -----*/
+.typography-control {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    position: relative;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.typography-control::before {
     content: "";
     position: absolute;
     top: -16px;
@@ -15,20 +64,20 @@
     border-block-end-color: #fff;
 }
 
-.typography-header{
+.typography-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
     font-size: 12px;
     padding: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
     margin-block-end: 15px;
 }
 
 .control-undo,
-.e-control-tool{
-    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+.e-control-tool {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
     cursor: pointer;
     width: 20px;
     height: 20px;
@@ -41,7 +90,7 @@
 }
 
 .control-undo i,
-.e-control-tool i{
+.e-control-tool i {
     position: absolute;
     top: 50%;
     left: 50%;
