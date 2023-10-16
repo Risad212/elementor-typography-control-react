@@ -13,18 +13,29 @@ function Fontsize() {
     return (
         <>
             <div className="fontsize-control-feild">
-                 <div className="fontsize-head">
-                   <span className="fontsize-title">Size</span>
-                    <ul className='icon-list'>
-                        <li className="item" onClick={() => {
-                            showDeviceIcon()
-                        }}><i class="fa-solid fa-desktop"></i></li>
-                        <li className="item"><i class="fa-solid fa-tablet-screen-button"></i></li>
-                        <li className="item"><i class="fa-solid fa-mobile-screen"></i></li>
-                    </ul>
-                 </div>
+                <div className="fontsize-head">
+                    <div className="left">
+                        <span className="fontsize-title">Size</span>
+                        <div className='icon-list'>
+                            <button className="item" onClick={() => {
+                                showDeviceIcon()
+                            }}><i class="fa-solid fa-desktop"></i></button>
+                            <button className="item"><i class="fa-solid fa-tablet-screen-button"></i></button>
+                            <button className="item"><i class="fa-solid fa-mobile-screen"></i></button>
+                        </div>
+                    </div>
+                    <div className="right">
+                       <div className="units-switcher">
+                          <span className='switch'>px</span>
+                          <span className='switch'>em</span>
+                          <span className='switch'>rem</span>
+                          <span className='switch'>vw</span>
+                          <span className='switch'><i class="fa-solid fa-pen"></i></span>
+                       </div>
+                    </div>
+                </div>
                 <div className="fontsize-nUiTouch">
-                    
+
                 </div>
             </div>
         </>

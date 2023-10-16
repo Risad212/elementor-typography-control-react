@@ -1,15 +1,19 @@
-.fontsize-control-feild{
+.fontsize-control-feild {
     padding: 0 20px 15px;
     display: flex;
     align-items: center;
     color: #515962;
+    position: relative;
 }
 
 .fontsize-control-feild .fontsize-head {
     position: relative;
-
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
-.fontsize-control-feild .fontsize-head .icon-list{
+
+.fontsize-control-feild .fontsize-head .icon-list {
     padding: 7px 8px;
     padding-bottom: 0;
     transition: .15s;
@@ -22,31 +26,63 @@
     overflow: hidden;
     height: 27px;
 }
-.showAllDeviceIcon{
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+
+.showAllDeviceIcon {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     height: 95px !important;
 }
-.fontsize-control-feild .fontsize-head .icon-list .item{
+
+.fontsize-control-feild .fontsize-head .icon-list .item {
     font-size: 12px;
     cursor: pointer;
     height: 2.5em;
     text-align: center;
+    background: none;
+    border: none;
+    display: flex;
 }
 
-.fontsize-control-feild .fontsize-title{
+.fontsize-control-feild .fontsize-head .right .units-switcher {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    right: 1px;
+    flex-direction: column;
+    background: #fff;
+    padding: 7px 8px;
+    border-radius: 3px;
+    transition: .15s;
+}
+
+.fontsize-control-feild .units-switcher .switch {
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+.fontsize-control-feild .units-switcher .switch:last-child{
+    margin-bottom: 0;
+}
+.showUnitSwhitch{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.fontsize-control-feild .fontsize-title {
     font-size: 12px;
     color: #515962;
     max-width: 60%;
     margin-inline-end: 5px;
 }
-.fontsize-control-feild .fontsize-select-wrap{
+
+.fontsize-control-feild .fontsize-select-wrap {
     margin-inline-start: auto;
 }
-.fontsize-control-feild .fontsize-select-wrap{
+
+.fontsize-control-feild .fontsize-select-wrap {
     max-width: 400px;
     width: 52%;
 }
-.fontsize-control-feild .fontsize-select-wrap select{
+
+.fontsize-control-feild .fontsize-select-wrap select {
     max-width: 100%;
     border-color: #d5d8dc;
     height: 27px;
@@ -59,7 +95,7 @@
     position: relative;
 }
 
-.fontsize-control-feild .fontsize-select-wrap select::after{
+.fontsize-control-feild .fontsize-select-wrap select::after {
     font-family: FontAwesome;
     content: "\e8ad";
     font-size: 12px;
