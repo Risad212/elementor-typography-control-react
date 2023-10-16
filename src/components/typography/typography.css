@@ -53,6 +53,7 @@
     position: relative;
     margin: auto;
     margin-top: 15px;
+    display: none;
 }
 
 .typography-control::before {
@@ -96,4 +97,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 13px;
+}
+
+
+
+/*---------- hide typography control ------------*/
+.showTypography{
+    display: block;
 }

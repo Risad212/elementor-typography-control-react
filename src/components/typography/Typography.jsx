@@ -7,6 +7,15 @@ import './typography.css';
 
 
 function typography() {
+    let isToggled = false;
+    const toggle = () => {
+        isToggled = !isToggled;
+        if (isToggled) {
+            document.querySelector('.typography-control').classList.add('showTypography')
+        } else {
+            document.querySelector('.typography-control').classList.remove('showTypography')
+        }
+    }
     return (
         <>
             <div className="main-control">
@@ -16,7 +25,9 @@ function typography() {
                     </div>
                     <div className="main-control-icon">
                         <span className='icon'><i class="fa-solid fa-globe"></i></span>
-                        <span className="icon"><i class="fa-solid fa-pen-to-square"></i></span>
+                        <span className="icon" onClick={(e) => {
+                            toggle()
+                        }}><i class="fa-solid fa-pen-to-square"></i></span>
                     </div>
                 </div>
                 <div className="typography-control">
