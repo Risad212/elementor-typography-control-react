@@ -9,6 +9,7 @@
     font-size: 12px;
     color: #515962;
     max-width: 60%;
+    text-transform: capitalize;
     display: inline-block;
 }
 .selection-control-feild .selection-select-wrap{
@@ -19,7 +20,7 @@
     width: 52%;
 }
 .selection-control-feild .selection-select-wrap select{
-    max-width: 100%;
+    width: 100%;
     border-color: #d5d8dc;
     height: 27px;
     outline: none;
@@ -29,6 +30,7 @@
     padding-inline-start: 5px;
     padding-inline-end: 20px;
     position: relative;
+    text-transform: capitalize;
 }
 
 .selection-control-feild .selection-select-wrap select::after{

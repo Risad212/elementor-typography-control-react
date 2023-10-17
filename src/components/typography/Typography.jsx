@@ -5,8 +5,12 @@ import Fontweight from '../fontweight/Fontweight';
 import Selection from '../selection/Selection';
 import Textdecoration from '../textdecoration/Textdecoration';
 import Transform from '../transform/Transform';
-import './typography.css';
+
+import { transformData } from '../dummyData/Dummydata';
+import { styleData } from '../dummyData/Dummydata';
 import { decorationData } from '../dummyData/Dummydata';
+
+import './typography.css';
 
 function typography() {
     let isToggled = false;
@@ -47,11 +51,11 @@ function typography() {
                     {/*------- font width control ----------*/}
                     <Fontweight />
                     {/*------- transform control ----------*/}
-                    <Transform />
+                    <Selection data={transformData}/>
                     {/*------- font style control ----------*/}
-                    <Fontstyle />
+                    <Selection data={styleData}/>
                     {/*------- text decoration control ----------*/}
-                    <Textdecoration />
+                    <Selection data={decorationData}/>
                 </div>
             </div>
         </>
