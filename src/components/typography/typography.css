@@ -53,7 +53,7 @@
     position: relative;
     margin: auto;
     margin-top: 15px;
-    display: none;
+    display: block;
     border-radius: 3px;
 }
 
