@@ -18,6 +18,8 @@ function typography() {
     const [stateValue,setStateValue] = useState({
         family: '',
         size: '',
+        style: '',
+        weight: '',
     })
 
     const stateProps = {
@@ -62,19 +64,19 @@ function typography() {
                     {/*------- font size control ----------*/}
                     <Fontsize stateProps={stateProps}/>
                     {/*------- font width control ----------*/}
-                    <Selection data={weightData}/>
+                    <Selection data={weightData} stateProps={stateProps}/>
                     {/*------- transform control ----------*/}
-                    <Selection data={transformData}/>
+                    <Selection data={transformData} stateProps={stateProps}/>
                     {/*------- font style control ----------*/}
-                    <Selection data={styleData}/>
+                    <Selection data={styleData} stateProps={stateProps}/>
                     {/*------- text decoration control ----------*/}
-                    <Selection data={decorationData}/>
+                    <Selection data={decorationData} stateProps={stateProps}/>
                     {/*------- line height control ----------*/}
-                    <Lineheight />
+                    <Lineheight stateProps={stateProps}/>
                     {/*------- letter spacing control ----------*/}
-                    <Letterspacing />
+                    <Letterspacing stateProps={stateProps}/>
                     {/*------- word spacing control ----------*/}
-                    <Wordspacing />
+                    <Wordspacing stateProps={stateProps}/>
                 </div>
             </div>
         </>

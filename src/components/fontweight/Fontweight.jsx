@@ -1,12 +1,25 @@
 import './fontweight.css';
 
-function Fontweight() {
+function Fontweight({stateProps}) {
+    const {value,setValue} = stateProps;
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            weight: elem.target.value,
+          });
+
+    }
+
+    if(value){
+        console.log(value.weight);
+    }
     return (
         <>
             <div className="fontWeight-control-feild">
                 <span className="fontWeight-title">Weight</span>
                 <div className="fontWeight-select-wrap">
-                    <select id="elementor-control-default-c1945" data-setting="label_typography_font_weight">
+                    <select id="selectId" onChange={handleOnchange}>
                         <option value="100">100 (Thin)</option>
 
                         <option value="200">200 (Extra Light)</option>

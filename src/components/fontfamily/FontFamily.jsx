@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './fontfamily.css';
 
 function Fontfamily({stateProps}) {
@@ -13,7 +12,7 @@ function Fontfamily({stateProps}) {
     }
 
   /*--- check if has value in state will show in console ----*/
-    if(value && value.family){
+    if(value){
         console.log(value.family);
     }
 
