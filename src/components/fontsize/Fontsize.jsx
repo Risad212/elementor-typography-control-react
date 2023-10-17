@@ -11,7 +11,6 @@ function Fontsize() {
         }
     }
 
-
     // let isToggledUnits = false;
     // const showUnits = () => {
     //     isToggled = !isToggled;

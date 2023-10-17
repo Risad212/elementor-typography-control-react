@@ -6,7 +6,6 @@ import Selection from '../selection/Selection';
 import Textdecoration from '../textdecoration/Textdecoration';
 import Transform from '../transform/Transform';
 import './typography.css';
-
 import { decorationData } from '../dummyData/Dummydata';
 
 function typography() {
@@ -19,6 +18,7 @@ function typography() {
             document.querySelector('.typography-control').classList.remove('showTypography')
         }
     }
+
     return (
         <>
             <div className="main-control">
@@ -28,7 +28,7 @@ function typography() {
                     </div>
                     <div className="main-control-icon">
                         <span className='icon'><i class="fa-solid fa-globe"></i></span>
-                        <span className="icon" onClick={(e) => {
+                        <span className="icon" onClick={() => {
                             toggle()
                         }}><i class="fa-solid fa-pen-to-square"></i></span>
                     </div>
