@@ -10,6 +10,7 @@ import { styleData } from '../dummyData/Dummydata';
 import { decorationData } from '../dummyData/Dummydata';
 
 import './typography.css';
+import Wordspacing from '../wordspacing/Wordspacing';
 
 
 function typography() {
@@ -60,6 +61,8 @@ function typography() {
                     <Lineheight />
                     {/*------- letter spacing control ----------*/}
                     <Letterspacing />
+                    {/*------- word spacing control ----------*/}
+                    <Wordspacing />
                 </div>
             </div>
         </>

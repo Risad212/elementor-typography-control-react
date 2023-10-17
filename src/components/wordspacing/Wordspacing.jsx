@@ -1,4 +1,4 @@
-
+import './wordspacing.css';
 
 function Wordspacing() {
     /*--------- device icon toggle function ------------*/
@@ -6,9 +6,9 @@ function Wordspacing() {
     const showDeviceIcon = () => {
         isToggled = !isToggled;
         if (isToggled) {
-            document.querySelector('.letterspacing-head .icon-list').classList.add('showAllDeviceIcon')
+            document.querySelector('.wordspacing-head .icon-list').classList.add('showAllDeviceIcon')
         } else {
-            document.querySelector('.letterspacing-head .icon-list').classList.remove('showAllDeviceIcon')
+            document.querySelector('.wordspacing-head .icon-list').classList.remove('showAllDeviceIcon')
         }
     }
        /*--------- units toggle function ------------*/
@@ -16,18 +16,18 @@ function Wordspacing() {
     const showUnits = () => {
         isToggledUnits = !isToggledUnits;
         if (isToggledUnits) {
-            document.querySelector('.letterspacing-head .units-switcher').classList.add('showUnitSwhitch')
+            document.querySelector('.wordspacing-head .units-switcher').classList.add('showUnitSwhitch')
         } else {
-            document.querySelector('.letterspacing-head .units-switcher').classList.remove('showUnitSwhitch')
+            document.querySelector('.wordspacing-head .units-switcher').classList.remove('showUnitSwhitch')
         }
     }
     
     return (
         <>
-            <div className="letterspacing-control-feild">
-                <div className="letterspacing-head">
+            <div className="wordspacing-control-feild">
+                <div className="wordspacing-head">
                     <div className="left">
-                        <span className="letterspacing-title">Letter Spacing</span>
+                        <span className="wordspacing-title">Word Spacing</span>
                         <div className='icon-list'>
                             <button className="item" onClick={() => {
                                 showDeviceIcon()
@@ -47,12 +47,12 @@ function Wordspacing() {
                         </div>
                     </div>
                 </div>
-                <div className="letterspacing-nUiTouch">
+                <div className="wordspacing-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='30' id="letterspacingRange" name="letterspacingRange" min="0" max="100" />
+                        <input type="range" defaultValue='0' id="wordspacingRange" name="wordspacingRange" min="0" max="100" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='letterspacingValue' defaultValue='' />
+                        <input type="number" name='wordspacingValue' defaultValue='' />
                     </div>
                 </div>
             </div>
