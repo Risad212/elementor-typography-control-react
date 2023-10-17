@@ -1,6 +1,20 @@
+import { useState } from 'react';
 import './fontsize.css';
 
-function Fontsize() {
+function Fontsize({stateProps}) {
+    const {value,setValue} = stateProps;
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            fontSize: elem.target.value,
+          });
+    }
+
+    if(value){
+        console.log(value.fontSize);
+    }
+    
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
@@ -22,6 +36,7 @@ function Fontsize() {
         }
     }
     
+
     return (
         <>
             <div className="fontsize-control-feild">
@@ -50,7 +65,7 @@ function Fontsize() {
                 </div>
                 <div className="fontsize-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='0' id="fontSizeRange" name="fontSizeRange" min="0" max="200" />
+                        <input type="range" defaultValue='0' onChange={handleOnchange} id="fontSizeRange" name="fontSizeRange" min="0" max="200" />
                     </div>
                     <div className="input-value">
                         <input type="number" name='fontSizeValue' defaultValue='1' />

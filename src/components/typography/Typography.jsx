@@ -11,14 +11,19 @@ import { decorationData } from '../dummyData/Dummydata';
 
 import './typography.css';
 import Wordspacing from '../wordspacing/Wordspacing';
+import { useState } from 'react';
 
 
 function typography() {
-    const [value,setValue] = [
-        {
-          family: 'null',
-        }
-    ];
+    const [stateValue,setStateValue] = useState({
+        family: '',
+        size: '',
+    })
+
+    const stateProps = {
+        value: stateValue,
+        setValue: setStateValue
+    }
 
     let isToggled = false;
     const toggle = () => {
@@ -53,9 +58,9 @@ function typography() {
                         </div>
                     </div>
                     {/*------- font control ----------*/}
-                    <Fontfamily handleState={[value,setValue]}/>
+                    <Fontfamily stateProps={stateProps}/>
                     {/*------- font size control ----------*/}
-                    <Fontsize />
+                    <Fontsize stateProps={stateProps}/>
                     {/*------- font width control ----------*/}
                     <Selection data={weightData}/>
                     {/*------- transform control ----------*/}

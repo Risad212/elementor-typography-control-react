@@ -1,12 +1,28 @@
+import { useState } from 'react';
 import './fontfamily.css';
 
-function Fontfamily() {
+function Fontfamily({stateProps}) {
+    const {value,setValue} = stateProps;
+
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            family: elem.target.value,
+          });
+    }
+
+  /*--- check if has value in state will show in console ----*/
+    if(value && value.family){
+        console.log(value.family);
+    }
+
     return (
         <>
             <div className="font-control-feild">
                 <span className="font-title">Family</span>
                 <div className="wrap-select">
-                <select className="elementor-control-font-family">
+                <select className="elementor-control-font-family" onChange={handleOnchange}>
                     <option value="" data-select2-id="3">Default</option>
                        <optgroup label="System" data-select2-id="4">
 
