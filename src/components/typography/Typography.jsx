@@ -18,7 +18,6 @@ function typography() {
             document.querySelector('.typography-control').classList.remove('showTypography')
         }
     }
-
     return (
         <>
             <div className="main-control">

@@ -1,25 +1,27 @@
 import './fontsize.css';
 
 function Fontsize() {
+       /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
         isToggled = !isToggled;
         if (isToggled) {
+            document.querySelector('.icon-list').classList.add('showAllDeviceIcon')
+        } else {
+            document.querySelector('.icon-list').classList.remove('showAllDeviceIcon')
+        }
+    }
+
+    /*--------- units toggle function ------------*/
+    let isToggledUnits = false;
+    const showUnits = () => {
+        isToggledUnits = !isToggledUnits;
+        if (isToggledUnits) {
             document.querySelector('.units-switcher').classList.add('showUnitSwhitch')
         } else {
             document.querySelector('.units-switcher').classList.remove('showUnitSwhitch')
         }
     }
-
-    // let isToggledUnits = false;
-    // const showUnits = () => {
-    //     isToggled = !isToggled;
-    //     if (isToggled) {
-    //         document.querySelector('.units-switcher').classList.add('showUnits')
-    //     } else {
-    //         document.querySelector('.units-switcher').classList.remove('showUnits')
-    //     }
-    // }
     return (
         <>
             <div className="fontsize-control-feild">
@@ -36,7 +38,7 @@ function Fontsize() {
                     </div>
                     <div className="right">
                         <div className="units-switcher" onClick={() => {
-                            showDeviceIcon()
+                            showUnits()
                         }}>
                             <span className='switch'>px</span>
                             <span className='switch'>em</span>
