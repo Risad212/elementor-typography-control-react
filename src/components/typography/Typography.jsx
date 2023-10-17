@@ -1,12 +1,14 @@
 import Fontfamily from '../fontfamily/fontFamily';
 import Fontsize from '../fontsize/Fontsize';
 import Selection from '../selection/Selection';
-
+import Inputrange from '../inputrange/Inputrange';
+/*----- selection data  --------*/
 import { weightData } from '../dummyData/Dummydata';
 import { transformData } from '../dummyData/Dummydata';
 import { styleData } from '../dummyData/Dummydata';
 import { decorationData } from '../dummyData/Dummydata';
-
+/*----- input range data  --------*/
+import { fontsizeData } from '../dummyData/Dummydata';
 import './typography.css';
 
 function typography() {
@@ -44,7 +46,8 @@ function typography() {
                     {/*------- font control ----------*/}
                     <Fontfamily />
                     {/*------- font size control ----------*/}
-                    <Fontsize />
+                    {/* <Fontsize /> */}
+                    <Inputrange data={fontsizeData}/>
                     {/*------- font width control ----------*/}
                     <Selection data={weightData}/>
                     {/*------- transform control ----------*/}

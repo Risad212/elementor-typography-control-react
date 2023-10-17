@@ -1,4 +1,4 @@
-.fontsize-control-feild {
+.inputrange-control-feild {
     padding: 0 20px 15px;
     display: flex;
     align-items: center;
@@ -7,14 +7,14 @@
     flex-direction: column;
 }
 
-.fontsize-control-feild .fontsize-head {
+.inputrange-control-feild .inputrange-head {
     position: relative;
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.fontsize-control-feild .fontsize-head .icon-list {
+.inputrange-control-feild .inputrange-head .icon-list {
     padding: 7px 8px;
     padding-bottom: 0;
     transition: .15s;
@@ -28,12 +28,12 @@
     height: 27px;
 }
 
-.showAllDeviceIcon {
+.inputrange .showAllDeviceIcon {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     height: 95px !important;
 }
 
-.fontsize-control-feild .fontsize-head .icon-list .item {
+.inputrange-control-feild .inputrange-head .icon-list .item {
     font-size: 12px;
     cursor: pointer;
     height: 2.5em;
@@ -44,7 +44,7 @@
 }
 
 /*------- Unites switcher --------*/
-.fontsize-control-feild .fontsize-head .right .units-switcher {
+.inputrange-control-feild .inputrange-head .right .units-switcher {
     display: flex;
     overflow: hidden;
     position: absolute;
@@ -57,36 +57,38 @@
     border-radius: 3px;
     transition: .15s;
     height: 27px;
+    border: none;
+    outline: none;
 }
 .showUnitSwhitch{
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     height: 155px !important;
 }
-.fontsize-control-feild .units-switcher .switch {
+.inputrange-control-feild .units-switcher .switch {
     font-size: 10px;
     margin-bottom: 15px;
     cursor: pointer;
 }
-.fontsize-control-feild .units-switcher .switch:last-child{
+.inputrange-control-feild .units-switcher .switch:last-child{
     margin-bottom: 0;
 }
-.fontsize-control-feild .fontsize-title {
+.inputrange-control-feild .inputrange-title {
     font-size: 12px;
     color: #515962;
     max-width: 60%;
     margin-inline-end: 5px;
 }
 
-.fontsize-control-feild .fontsize-select-wrap {
+.inputrange-control-feild .inputrange-select-wrap {
     margin-inline-start: auto;
 }
 
-.fontsize-control-feild .fontsize-select-wrap {
+.inputrange-control-feild .inputrange-select-wrap {
     max-width: 400px;
     width: 52%;
 }
 
-.fontsize-control-feild .fontsize-select-wrap select {
+.inputrange-control-feild .inputrange-select-wrap select {
     max-width: 100%;
     border-color: #d5d8dc;
     height: 27px;
@@ -99,7 +101,7 @@
     position: relative;
 }
 
-.fontsize-control-feild .fontsize-select-wrap select::after {
+.inputrange-control-feild .inputrange-select-wrap select::after {
     font-family: FontAwesome;
     content: "\e8ad";
     font-size: 12px;
@@ -110,21 +112,21 @@
     pointer-events: none;
 }
 
-.fontsize-nUiTouch{
+.inputrange-nUiTouch{
     display: flex;
     align-items: center;
     margin-top: 10px;
     justify-content: space-between;
 }
 
-.fontsize-nUiTouch .input-value{
+.inputrange-nUiTouch .input-value{
     width: 21%;
     min-width: 54px;
     margin-inline-start: 12px;
     transition: width .3s ease-in-out;
 }
 
-.fontsize-nUiTouch .input-value input{
+.inputrange-nUiTouch .input-value input{
     padding: 5px;
     color: #515962;
     border-radius: 3px;
@@ -137,14 +139,14 @@
     outline: none;
 }
 
-.fontsize-nUiTouch .input-rang{
+.inputrange-nUiTouch .input-rang{
     width: 79%;
     display: flex;
 }
 
 
 /*********** Baseline, reset styles ***********/
-.fontsize-nUiTouch .input-rang input[type="range"] {
+.input-rang input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
     background: transparent;
@@ -153,20 +155,20 @@
   }
   
   /* Removes default focus */
-  .fontsize-nUiTouch .input-rang input[type="range"]:focus {
+  .input-rang input[type="range"]:focus {
     outline: none;
   }
   
   /******** Chrome, Safari, Opera and Edge Chromium styles ********/
   /* slider track */
-  .fontsize-nUiTouch .input-rang input[type="range"]::-webkit-slider-runnable-track {
+  .input-rang input[type="range"]::-webkit-slider-runnable-track {
     background-color: #d5d8dc;
     height: 4px;
     border-radius: 5px;
   }
   
   /* slider thumb */
-  .fontsize-nUiTouch .input-rang input[type="range"]::-webkit-slider-thumb {
+  .input-rang input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     margin-top: -5px; /* Centers thumb on the track */
@@ -179,14 +181,14 @@
   
   /*********** Firefox styles ***********/
   /* slider track */
-  .fontsize-nUiTouch .input-rang input[type="range"]::-moz-range-track {
+  .input-rang input[type="range"]::-moz-range-track {
     background-color: #fff;
     border-radius: 0.5rem;
     height: 0.5rem;
   }
   
   /* slider thumb */
-  .fontsize-nUiTouch .input-rang input[type="range"]::-moz-range-thumb {
+  .input-rang input[type="range"]::-moz-range-thumb {
     background-color: #fff;
     border: none; /*Removes extra border that FF applies*/
     border-radius: 0.5rem;

@@ -1,6 +1,7 @@
-import './fontsize.css';
+import './inputrange.css';
 
-function Fontsize() {
+function Inputrange({data}) {
+    const {title, defaultValue, maxRange, units,inputName,rangDefaultValue} = data;
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
@@ -21,12 +22,13 @@ function Fontsize() {
             document.querySelector('.units-switcher').classList.remove('showUnitSwhitch')
         }
     }
+
     return (
         <>
-            <div className="fontsize-control-feild">
-                <div className="fontsize-head">
+            <div className="inputrange-control-feild">
+                <div className="inputrange-head">
                     <div className="left">
-                        <span className="fontsize-title">Size</span>
+                        <span className="inputrange-title">{title}</span>
                         <div className='icon-list'>
                             <button className="item" onClick={() => {
                                 showDeviceIcon()
@@ -39,20 +41,25 @@ function Fontsize() {
                         <div className="units-switcher" onClick={() => {
                             showUnits();
                         }}>
-                            <span className='switch'>px</span>
-                            <span className='switch'>em</span>
-                            <span className='switch'>rem</span>
-                            <span className='switch'>vw</span>
-                            <span className='switch'><i class="fa-solid fa-pen"></i></span>
+                            {
+                                units && units.map((elem,index) => {
+                                    return(
+                                        <>
+                                           <span className='switch' key={index}>{elem}</span>
+                                        </>
+                                    )
+                                })
+                            }
+                            <span className='switch'><i class="fa-solid fa-pen"></i></span> 
                         </div>
                     </div>
                 </div>
-                <div className="fontsize-nUiTouch">
+                <div className="inputrange-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" id="vol" name="vol" min="0" max="200" />
+                        <input type="range" defaultValue={rangDefaultValue} id="vol" name="vol" min="0" max={maxRange} />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='fontsize' defaultValue='1' />
+                        <input type="number" name={inputName} defaultValue={defaultValue} />
                     </div>
                 </div>
             </div>
@@ -60,4 +67,4 @@ function Fontsize() {
     );
 }
 
-export default Fontsize;
+export default Inputrange;

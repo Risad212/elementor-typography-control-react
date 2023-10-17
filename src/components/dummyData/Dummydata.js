@@ -28,8 +28,6 @@ export const decorationData = [
     }
 ]
 
-
-
 /*--------- style Data --------------*/ 
 export const styleData = [
     {
@@ -54,7 +52,6 @@ export const styleData = [
         ]
     }
 ]
-
 
 
 /*--------- style Data --------------*/ 
@@ -85,8 +82,6 @@ export const transformData = [
         ]
     }
 ]
-
-
 
 
 /*--------- style Data --------------*/ 
@@ -145,3 +140,18 @@ export const weightData = [
         ]
     }
 ]
+
+
+
+/*--================== input range data ====================--*/
+
+
+/*------ font-size data ---------*/
+export const fontsizeData = {
+    title: 'size',
+    defaultValue: 1,
+    maxRange: '200',
+    units: ['px', 'em', 'rem', 'vw'],
+    inputName: 'fontsize',
+    rangDefaultValue: 0,
+}
