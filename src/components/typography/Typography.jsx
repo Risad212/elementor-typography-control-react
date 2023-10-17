@@ -1,13 +1,16 @@
 import Fontfamily from '../fontfamily/fontFamily';
 import Fontsize from '../fontsize/Fontsize';
 import Selection from '../selection/Selection';
-import Inputrange from '../inputrange/Inputrange';
+import Lineheight from '../lineheight/Lineheight';
+import Letterspacing from '../letterspacing/Letterspacing';
 /*----- selection data  --------*/
 import { weightData } from '../dummyData/Dummydata';
 import { transformData } from '../dummyData/Dummydata';
 import { styleData } from '../dummyData/Dummydata';
 import { decorationData } from '../dummyData/Dummydata';
+
 import './typography.css';
+
 
 function typography() {
     let isToggled = false;
@@ -53,6 +56,10 @@ function typography() {
                     <Selection data={styleData}/>
                     {/*------- text decoration control ----------*/}
                     <Selection data={decorationData}/>
+                    {/*------- line height control ----------*/}
+                    <Lineheight />
+                    {/*------- letter spacing control ----------*/}
+                    <Letterspacing />
                 </div>
             </div>
         </>
