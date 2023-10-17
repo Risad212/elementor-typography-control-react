@@ -53,7 +53,7 @@ function Fontsize() {
                         <input type="range" id="vol" name="vol" min="0" max="200" />
                     </div>
                     <div className="input-value">
-                        <input type="number" value='1' />
+                        <input type="number" name='fontsize' defaultValue='1' />
                     </div>
                 </div>
             </div>
