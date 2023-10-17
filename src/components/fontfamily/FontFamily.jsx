@@ -8,8 +8,7 @@ function Fontfamily() {
                 <div className="wrap-select">
                 <select className="elementor-control-font-family">
                     <option value="" data-select2-id="3">Default</option>
-
-                    <optgroup label="System" data-select2-id="4">
+                       <optgroup label="System" data-select2-id="4">
 
                         <option value="Arial" data-select2-id="5">Arial</option>
 

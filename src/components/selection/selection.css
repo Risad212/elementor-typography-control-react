@@ -1,24 +1,25 @@
-.fontstyle-control-feild{
+.selection-control-feild{
     padding: 0 20px 15px;
     display: flex;
     align-items: center;
     color: #515962;
 }
 
-.fontstyle-control-feild .fontstyle-title{
+.selection-control-feild .selection-title{
     font-size: 12px;
     color: #515962;
     max-width: 60%;
+    display: inline-block;
 }
-.fontstyle-control-feild .fontstyle-select-wrap{
+.selection-control-feild .selection-select-wrap{
     margin-inline-start: auto;
 }
-.fontstyle-control-feild .fontstyle-select-wrap{
+.selection-control-feild .selection-select-wrap{
     max-width: 400px;
     width: 52%;
 }
-.fontstyle-control-feild .fontstyle-select-wrap select{
-    width: 100%;
+.selection-control-feild .selection-select-wrap select{
+    max-width: 100%;
     border-color: #d5d8dc;
     height: 27px;
     outline: none;
@@ -30,7 +31,7 @@
     position: relative;
 }
 
-.fontstyle-control-feild .fontstyle-select-wrap select::after{
+.selection-control-feild .selection-select-wrap select::after{
     font-family: FontAwesome;
     content: "\e8ad";
     font-size: 12px;

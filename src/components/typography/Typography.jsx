@@ -2,10 +2,12 @@ import Fontfamily from '../fontfamily/fontFamily';
 import Fontsize from '../fontsize/Fontsize';
 import Fontstyle from '../fontstyle/Fontstyle';
 import Fontweight from '../fontweight/Fontweight';
+import Selection from '../selection/Selection';
 import Textdecoration from '../textdecoration/Textdecoration';
 import Transform from '../transform/Transform';
 import './typography.css';
 
+import { decorationData } from '../dummyData/Dummydata';
 
 function typography() {
     let isToggled = false;

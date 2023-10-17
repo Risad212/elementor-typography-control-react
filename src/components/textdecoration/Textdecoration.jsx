@@ -17,7 +17,6 @@ function Textdecoration() {
                         <option value="line-through">Line Through</option>
 
                         <option value="none">None</option>
-
                     </select>
                 </div>
             </div>

@@ -19,7 +19,7 @@
     width: 52%;
 }
 .textdecoration-control-feild .textdecoration-select-wrap select{
-    max-width: 100%;
+    width: 100%;
     border-color: #d5d8dc;
     height: 27px;
     outline: none;
