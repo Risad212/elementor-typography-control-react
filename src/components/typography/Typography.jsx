@@ -14,6 +14,12 @@ import Wordspacing from '../wordspacing/Wordspacing';
 
 
 function typography() {
+    const [value,setValue] = [
+        {
+          family: 'null',
+        }
+    ];
+
     let isToggled = false;
     const toggle = () => {
         isToggled = !isToggled;
@@ -23,6 +29,7 @@ function typography() {
             document.querySelector('.typography-control').classList.remove('showTypography')
         }
     }
+
     return (
         <>
             <div className="main-control">
@@ -46,7 +53,7 @@ function typography() {
                         </div>
                     </div>
                     {/*------- font control ----------*/}
-                    <Fontfamily />
+                    <Fontfamily handleState={[value,setValue]}/>
                     {/*------- font size control ----------*/}
                     <Fontsize />
                     {/*------- font width control ----------*/}
