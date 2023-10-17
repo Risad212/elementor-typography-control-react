@@ -21,6 +21,7 @@ function Fontsize() {
             document.querySelector('.units-switcher').classList.remove('showUnitSwhitch')
         }
     }
+    
     return (
         <>
             <div className="fontsize-control-feild">
@@ -39,20 +40,20 @@ function Fontsize() {
                         <div className="units-switcher" onClick={() => {
                             showUnits();
                         }}>
-                            <span className='switch'>px</span>
-                            <span className='switch'>em</span>
-                            <span className='switch'>rem</span>
-                            <span className='switch'>vw</span>
-                            <span className='switch'><i class="fa-solid fa-pen"></i></span>
+                          <span className="switch">px</span>
+                          <span className="switch">em</span>
+                          <span className="switch">rem</span>
+                          <span className="switch">vw</span>
+                          <span className='switch'><i class="fa-solid fa-pen"></i></span> 
                         </div>
                     </div>
                 </div>
                 <div className="fontsize-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" id="vol" name="vol" min="0" max="200" />
+                        <input type="range" defaultValue='0' id="fontSizeRange" name="fontSizeRange" min="0" max="200" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='fontsize' defaultValue='1' />
+                        <input type="number" name='fontSizeValue' defaultValue='1' />
                     </div>
                 </div>
             </div>

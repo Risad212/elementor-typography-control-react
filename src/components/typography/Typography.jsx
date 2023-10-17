@@ -7,8 +7,6 @@ import { weightData } from '../dummyData/Dummydata';
 import { transformData } from '../dummyData/Dummydata';
 import { styleData } from '../dummyData/Dummydata';
 import { decorationData } from '../dummyData/Dummydata';
-/*----- input range data  --------*/
-import { fontsizeData } from '../dummyData/Dummydata';
 import './typography.css';
 
 function typography() {
@@ -46,8 +44,7 @@ function typography() {
                     {/*------- font control ----------*/}
                     <Fontfamily />
                     {/*------- font size control ----------*/}
-                    {/* <Fontsize /> */}
-                    <Inputrange data={fontsizeData}/>
+                    <Fontsize />
                     {/*------- font width control ----------*/}
                     <Selection data={weightData}/>
                     {/*------- transform control ----------*/}

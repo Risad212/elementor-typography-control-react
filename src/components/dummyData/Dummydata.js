@@ -1,4 +1,3 @@
-
 /*--------- Decoration Data --------------*/ 
 export const decorationData = [
     {
@@ -140,18 +139,3 @@ export const weightData = [
         ]
     }
 ]
-
-
-
-/*--================== input range data ====================--*/
-
-
-/*------ font-size data ---------*/
-export const fontsizeData = {
-    title: 'size',
-    defaultValue: 1,
-    maxRange: '200',
-    units: ['px', 'em', 'rem', 'vw'],
-    inputName: 'fontsize',
-    rangDefaultValue: 0,
-}

@@ -1,7 +1,7 @@
 import './inputrange.css';
 
 function Inputrange({data}) {
-    const {title, defaultValue, maxRange, units,inputName,rangDefaultValue} = data;
+    const {title, defaultValue, maxRange, units,rangInputName,rangDefaultValue} = data;
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
@@ -56,10 +56,10 @@ function Inputrange({data}) {
                 </div>
                 <div className="inputrange-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue={rangDefaultValue} id="vol" name="vol" min="0" max={maxRange} />
+                        <input type="range" defaultValue={rangDefaultValue} id="vol" name={rangInputName} min="0" max={maxRange} />
                     </div>
                     <div className="input-value">
-                        <input type="number" name={inputName} defaultValue={defaultValue} />
+                        <input type="number" name="" defaultValue={defaultValue} />
                     </div>
                 </div>
             </div>
