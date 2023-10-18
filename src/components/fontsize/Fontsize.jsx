@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './fontsize.css';
 
 function Fontsize({stateProps}) {
@@ -7,12 +6,12 @@ function Fontsize({stateProps}) {
     const handleOnchange = (elem) => {
         setValue({
             ...value,
-            fontSize: elem.target.value,
+            size: elem.target.value,
           });
     }
 
     if(value){
-        console.log(value.fontSize);
+        console.log(value.size);
     }
     
     /*--------- device icon toggle function ------------*/
@@ -25,7 +24,7 @@ function Fontsize({stateProps}) {
             document.querySelector('.icon-list').classList.remove('showAllDeviceIcon')
         }
     }
-       /*--------- units toggle function ------------*/
+   /*--------- units toggle function ------------*/
     let isToggledUnits = false;
     const showUnits = () => {
         isToggledUnits = !isToggledUnits;

@@ -49,7 +49,7 @@ function Letterspacing() {
                 </div>
                 <div className="letterspacing-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='30' id="letterspacingRange" name="letterspacingRange" min="0" max="100" />
+                        <input type="range" defaultValue='30' id="letterspacingRange" name="letterSpacing" min="0" max="100" />
                     </div>
                     <div className="input-value">
                         <input type="number" name='letterspacingValue' defaultValue='' />

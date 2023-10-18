@@ -19,7 +19,7 @@ function Fontstyle({stateProps}) {
             <div className="fontstyle-control-feild">
                 <span className="fontstyle-title">Style</span>
                 <div className="fontstyle-select-wrap">
-                    <select id="selectId" onChange={handleOnchange}>
+                    <select id="selectId" name='style' onChange={handleOnchange}>
                         <option value="">Default</option>
 
                         <option value="normal">Normal</option>

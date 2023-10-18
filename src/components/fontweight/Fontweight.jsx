@@ -4,10 +4,12 @@ function Fontweight({stateProps}) {
     const {value,setValue} = stateProps;
 
     const handleOnchange = (elem) => {
-        setValue({
-            ...value,
-            weight: elem.target.value,
-          });
+        // setValue({
+        //     ...value,
+        //     weight: elem.target.value,
+        //   });
+
+        console.log(elem);
 
     }
 
@@ -19,7 +21,7 @@ function Fontweight({stateProps}) {
             <div className="fontWeight-control-feild">
                 <span className="fontWeight-title">Weight</span>
                 <div className="fontWeight-select-wrap">
-                    <select id="selectId" onChange={handleOnchange}>
+                    <select id="selectId" name='weight' onChange={handleOnchange}>
                         <option value="100">100 (Thin)</option>
 
                         <option value="200">200 (Extra Light)</option>

@@ -6,7 +6,7 @@ function Transform() {
             <div className="transform-control-feild">
                 <span className="transform-title">Transform</span>
                 <div className="transform-select-wrap">
-                    <select id="selectId">
+                    <select id="selectId" name='transform'>
                         <option value="">Default</option>
 
                         <option value="uppercase">Uppercase</option>

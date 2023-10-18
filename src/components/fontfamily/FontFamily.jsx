@@ -7,8 +7,9 @@ function Fontfamily({stateProps}) {
     const handleOnchange = (elem) => {
         setValue({
             ...value,
-            family: elem.target.value,
+            family :elem.target.value,
           });
+     
     }
 
   /*--- check if has value in state will show in console ----*/
@@ -21,7 +22,7 @@ function Fontfamily({stateProps}) {
             <div className="font-control-feild">
                 <span className="font-title">Family</span>
                 <div className="wrap-select">
-                <select className="elementor-control-font-family" onChange={handleOnchange}>
+                <select id='selectId' name='family'>
                     <option value="" data-select2-id="3">Default</option>
                        <optgroup label="System" data-select2-id="4">
 

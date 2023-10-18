@@ -49,7 +49,7 @@ function lineheight() {
                 </div>
                 <div className="lineheight-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='0' id="lineheightRange" name="lineheightRange" min="0" max="100" />
+                        <input type="range" defaultValue='0' id="lineheightRange" name="lineHeight" min="0" max="100" />
                     </div>
                     <div className="input-value">
                         <input type="number" name='lineheightValue' defaultValue='' />

@@ -18,8 +18,13 @@ function typography() {
     const [stateValue,setStateValue] = useState({
         family: '',
         size: '',
-        style: '',
         weight: '',
+        transform: '',
+        style: '',
+        decoration: '',
+        lineHeight: '',
+        letterSpacing: '',
+        wordSpacing: '',
     })
 
     const stateProps = {
