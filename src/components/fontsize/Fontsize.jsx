@@ -67,7 +67,7 @@ function Fontsize({stateProps}) {
                         <input type="range" defaultValue='0' onChange={handleOnchange} id="fontSizeRange" name="fontSizeRange" min="0" max="200" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='fontSizeValue' defaultValue='1' />
+                        <input type="number" name='fontSizeValue' defaultValue={value.size} />
                     </div>
                 </div>
             </div>

@@ -4,11 +4,10 @@ function Fontstyle({stateProps}) {
     const {value,setValue} = stateProps;
 
     const handleOnchange = (elem) => {
-        // setValue({
-        //     ...value,
-        //     style: elem.target.value,
-        //   });
-
+        setValue({
+            ...value,
+            style: elem.target.value,
+          });
     }
 
     if(value){

@@ -1,6 +1,19 @@
 import './wordspacing.css';
 
-function Wordspacing() {
+function Wordspacing({stateProps}) {
+    const {value,setValue} = stateProps;
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            wordSpacing: elem.target.value,
+          });
+    }
+
+    if(value){
+        console.log(value.wordSpacing);
+    }
+
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
@@ -49,10 +62,10 @@ function Wordspacing() {
                 </div>
                 <div className="wordspacing-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='0' id="wordspacingRange" name="wordSpacing" min="0" max="100" />
+                        <input type="range" onChange={handleOnchange} defaultValue='0' id="wordspacingRange" name="wordSpacing" min="0" max="100" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='wordspacingValue' defaultValue='' />
+                        <input type="number" name='wordspacingValue' defaultValue={value.wordSpacing? value.wordSpacing: ''} />
                     </div>
                 </div>
             </div>

@@ -2,7 +2,6 @@ import './selection.css';
 
 function Selection({data}) {
     const {title,selectData} = data[0];
-    console.log(title);
     return (
         <>
             <div className="selection-control-feild">

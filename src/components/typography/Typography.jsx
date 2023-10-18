@@ -1,17 +1,15 @@
+import { useState } from 'react';
 import Fontfamily from '../fontfamily/fontFamily';
 import Fontsize from '../fontsize/Fontsize';
-import Selection from '../selection/Selection';
+import Fontweight from '../fontweight/Fontweight';
+import Transform from '../transform/Transform';
+import Fontstyle from '../fontstyle/Fontstyle';
+import Textdecoration from '../textdecoration/Textdecoration';
 import Lineheight from '../lineheight/Lineheight';
 import Letterspacing from '../letterspacing/Letterspacing';
-/*----- selection data  --------*/
-import { weightData } from '../dummyData/Dummydata';
-import { transformData } from '../dummyData/Dummydata';
-import { styleData } from '../dummyData/Dummydata';
-import { decorationData } from '../dummyData/Dummydata';
-
-import './typography.css';
 import Wordspacing from '../wordspacing/Wordspacing';
-import { useState } from 'react';
+import './typography.css';
+
 
 
 function typography() {
@@ -69,13 +67,13 @@ function typography() {
                     {/*------- font size control ----------*/}
                     <Fontsize stateProps={stateProps}/>
                     {/*------- font width control ----------*/}
-                    <Selection data={weightData} stateProps={stateProps}/>
+                    <Fontweight stateProps={stateProps}/>
                     {/*------- transform control ----------*/}
-                    <Selection data={transformData} stateProps={stateProps}/>
+                    <Transform stateProps={stateProps}/>
                     {/*------- font style control ----------*/}
-                    <Selection data={styleData} stateProps={stateProps}/>
+                    <Fontstyle stateProps={stateProps}/>
                     {/*------- text decoration control ----------*/}
-                    <Selection data={decorationData} stateProps={stateProps}/>
+                    <Textdecoration stateProps={stateProps}/>
                     {/*------- line height control ----------*/}
                     <Lineheight stateProps={stateProps}/>
                     {/*------- letter spacing control ----------*/}

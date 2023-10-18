@@ -1,12 +1,24 @@
 import './transform.css';
 
-function Transform() {
+function Transform({stateProps}) {
+    const {value,setValue} = stateProps;
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            transform: elem.target.value,
+          });
+    }
+
+    if(value){
+        console.log(value.transform);
+    }
     return (
         <>
             <div className="transform-control-feild">
                 <span className="transform-title">Transform</span>
                 <div className="transform-select-wrap">
-                    <select id="selectId" name='transform'>
+                    <select id="selectId" name='transform' onChange={handleOnchange}>
                         <option value="">Default</option>
 
                         <option value="uppercase">Uppercase</option>

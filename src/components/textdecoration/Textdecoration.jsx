@@ -1,12 +1,24 @@
 import './textdecoration.css';
 
-function Textdecoration() {
+function Textdecoration({stateProps}) {
+    const {value,setValue} = stateProps;
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            decoration: elem.target.value,
+          });
+    }
+
+    if(value){
+        console.log(value.decoration);
+    }
     return (
         <>
             <div className="textdecoration-control-feild">
                 <span className="textdecoration-title">Decoration</span>
                 <div className="textdecoration-select-wrap">
-                    <select id="selectId">
+                    <select id="selectId" onChange={handleOnchange}>
 
                         <option value="">Default</option>
 

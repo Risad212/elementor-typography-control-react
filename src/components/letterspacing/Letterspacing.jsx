@@ -1,6 +1,19 @@
 import './letterspacing.css';
 
-function Letterspacing() {
+function Letterspacing({stateProps}) {
+    const {value,setValue} = stateProps;
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            letterSpacing: elem.target.value,
+          });
+    }
+
+    if(value){
+        console.log(value.letterSpacing);
+    }
+
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
@@ -49,10 +62,10 @@ function Letterspacing() {
                 </div>
                 <div className="letterspacing-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='30' id="letterspacingRange" name="letterSpacing" min="0" max="100" />
+                        <input type="range" onChange={handleOnchange} defaultValue='30' id="letterspacingRange" name="letterSpacing" min="0" max="100" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='letterspacingValue' defaultValue='' />
+                        <input type="number" name='letterspacingValue' defaultValue={value.letterSpacing? value.letterSpacing: ''} />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,18 @@
 import './lineheight.css';
 
-function lineheight() {
+function lineheight({stateProps}) {
+    const {value,setValue} = stateProps;
+
+    const handleOnchange = (elem) => {
+        setValue({
+            ...value,
+            lineHeight: elem.target.value,
+          });
+    }
+
+    if(value){
+        console.log(value.lineHeight);
+    }
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
@@ -49,10 +61,10 @@ function lineheight() {
                 </div>
                 <div className="lineheight-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='0' id="lineheightRange" name="lineHeight" min="0" max="100" />
+                        <input type="range" onChange={handleOnchange} defaultValue='0' id="lineheightRange" name="lineHeight" min="0" max="100" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='lineheightValue' defaultValue='' />
+                        <input type="number" name='lineheightValue' defaultValue={value.lineHeight? value.lineHeight: ''} />
                     </div>
                 </div>
             </div>

@@ -2,15 +2,11 @@ import './fontweight.css';
 
 function Fontweight({stateProps}) {
     const {value,setValue} = stateProps;
-
     const handleOnchange = (elem) => {
-        // setValue({
-        //     ...value,
-        //     weight: elem.target.value,
-        //   });
-
-        console.log(elem);
-
+        setValue({
+            ...value,
+            weight: elem.target.value,
+          });
     }
 
     if(value){

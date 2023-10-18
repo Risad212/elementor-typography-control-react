@@ -3,7 +3,6 @@ import './fontfamily.css';
 function Fontfamily({stateProps}) {
     const {value,setValue} = stateProps;
 
-
     const handleOnchange = (elem) => {
         setValue({
             ...value,
@@ -22,7 +21,7 @@ function Fontfamily({stateProps}) {
             <div className="font-control-feild">
                 <span className="font-title">Family</span>
                 <div className="wrap-select">
-                <select id='selectId' name='family'>
+                <select id='selectId' name='family' onChange={handleOnchange}>
                     <option value="" data-select2-id="3">Default</option>
                        <optgroup label="System" data-select2-id="4">
 
