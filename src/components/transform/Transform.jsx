@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './transform.css';
 
 function Transform({stateProps}) {
@@ -10,9 +11,12 @@ function Transform({stateProps}) {
           });
     }
 
-    if(value){
-        console.log(value.transform);
-    }
+    useEffect(() => {
+        if(value.transform){
+            console.log(value.transform);
+        }
+    },[value.transform])
+    
     return (
         <>
             <div className="transform-control-feild">

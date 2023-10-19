@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './fontweight.css';
 
 function Fontweight({stateProps}) {
@@ -9,9 +10,12 @@ function Fontweight({stateProps}) {
           });
     }
 
-    if(value){
-        console.log(value.weight);
-    }
+    useEffect(() => {
+        if(value.weight){
+            console.log(value.weight);
+        }
+    },[value.weight])
+    
     return (
         <>
             <div className="fontWeight-control-feild">

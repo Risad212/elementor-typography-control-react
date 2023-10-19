@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './fontstyle.css';
 
 function Fontstyle({stateProps}) {
@@ -10,9 +11,12 @@ function Fontstyle({stateProps}) {
           });
     }
 
-    if(value){
-        console.log(value.style);
-    }
+    useEffect(() => {
+        if(value.style){
+            console.log(value.style);
+        }
+    },[value.style])
+    
     return (
         <>
             <div className="fontstyle-control-feild">

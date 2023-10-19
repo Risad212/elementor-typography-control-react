@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './fontsize.css';
 
 function Fontsize({stateProps}) {
@@ -10,9 +11,12 @@ function Fontsize({stateProps}) {
           });
     }
 
-    if(value){
-        console.log(value.size);
-    }
+    useEffect(() => {
+        if(value.size){
+            console.log(value.size);
+        }
+    },[value.size])
+
     
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
@@ -34,7 +38,6 @@ function Fontsize({stateProps}) {
             document.querySelector('.units-switcher').classList.remove('showUnitSwhitch')
         }
     }
-    
 
     return (
         <>
@@ -67,7 +70,7 @@ function Fontsize({stateProps}) {
                         <input type="range" defaultValue='0' onChange={handleOnchange} id="fontSizeRange" name="fontSizeRange" min="0" max="200" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='fontSizeValue' defaultValue={value.size} />
+                        <input type="number" name='fontSizeValue' defaultValue={value.size? value.size: '1'} />
                     </div>
                 </div>
             </div>

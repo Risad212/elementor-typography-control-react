@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './lineheight.css';
 
 function lineheight({stateProps}) {
@@ -10,9 +11,14 @@ function lineheight({stateProps}) {
           });
     }
 
-    if(value){
-        console.log(value.lineHeight);
-    }
+    
+    useEffect(() => {
+        if(value.lineHeight){
+            console.log(value.lineHeight);
+        }
+    },[value.lineHeight])
+  
+
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './wordspacing.css';
 
 function Wordspacing({stateProps}) {
@@ -9,10 +10,12 @@ function Wordspacing({stateProps}) {
             wordSpacing: elem.target.value,
           });
     }
-
-    if(value){
-        console.log(value.wordSpacing);
-    }
+   
+    useEffect(() => {
+        if(value.wordSpacing){
+            console.log(value.wordSpacing);
+        }
+    },[value.wordSpacing])
 
     /*--------- device icon toggle function ------------*/
     let isToggled = false;

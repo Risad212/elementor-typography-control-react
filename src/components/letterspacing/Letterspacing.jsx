@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './letterspacing.css';
 
 function Letterspacing({stateProps}) {
@@ -10,9 +11,13 @@ function Letterspacing({stateProps}) {
           });
     }
 
-    if(value){
-        console.log(value.letterSpacing);
-    }
+    
+    useEffect(() => {
+        if(value.letterSpacing){
+            console.log(value.letterSpacing);
+        }
+    },[value.letterSpacing])
+
 
     /*--------- device icon toggle function ------------*/
     let isToggled = false;

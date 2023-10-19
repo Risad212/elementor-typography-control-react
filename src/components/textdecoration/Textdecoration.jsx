@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './textdecoration.css';
 
 function Textdecoration({stateProps}) {
@@ -10,9 +11,12 @@ function Textdecoration({stateProps}) {
           });
     }
 
-    if(value){
-        console.log(value.decoration);
-    }
+    useEffect(() => {
+        if(value.decoration){
+            console.log(value.decoration);
+        }
+    },[value.decoration])
+
     return (
         <>
             <div className="textdecoration-control-feild">

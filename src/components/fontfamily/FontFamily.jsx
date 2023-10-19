@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './fontfamily.css';
 
 function Fontfamily({stateProps}) {
@@ -12,10 +13,13 @@ function Fontfamily({stateProps}) {
     }
 
   /*--- check if has value in state will show in console ----*/
-    if(value){
-        console.log(value.family);
-    }
+    useEffect(() => {
+        if(value.family){
+            console.log(value.family);
+        }
+    },[value.family])
 
+    
     return (
         <>
             <div className="font-control-feild">
