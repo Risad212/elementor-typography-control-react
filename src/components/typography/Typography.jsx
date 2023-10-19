@@ -1,17 +1,13 @@
 import { useState } from 'react';
 import Fontfamily from '../fontfamily/fontFamily';
 import Fontsize from '../fontsize/Fontsize';
-import Fontweight from '../fontweight/Fontweight';
-import Transform from '../transform/Transform';
-import Fontstyle from '../fontstyle/Fontstyle';
-import Textdecoration from '../textdecoration/Textdecoration';
 import Lineheight from '../lineheight/Lineheight';
 import Letterspacing from '../letterspacing/Letterspacing';
 import Wordspacing from '../wordspacing/Wordspacing';
-import './typography.css';
 import Selection from '../selection/Selection';
-
 import {decorationData,styleData,transformData,weightData} from '../dummyData/Dummydata';
+import './typography.css';
+
 
 
 function typography() {

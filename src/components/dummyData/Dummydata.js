@@ -143,3 +143,17 @@ export const weightData = [
         ]
     }
 ]
+
+
+
+export const fontSizeData = {
+    title: 'Size',
+    key: 'size',
+    maxValue: '200'
+}
+
+export const lineHeightData = {
+    title: 'Line-Height',
+    key: 'lineHeight',
+    maxValue: '100'
+}
