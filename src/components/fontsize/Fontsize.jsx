@@ -5,9 +5,10 @@ function Fontsize({stateProps}) {
     const {value,setValue} = stateProps;
 
     const handleOnchange = (elem) => {
+        const newSize = parseInt(elem.target.value, 10);
         setValue({
             ...value,
-            size: elem.target.value,
+            size: newSize.toString(),
           });
     }
 
@@ -67,10 +68,10 @@ function Fontsize({stateProps}) {
                 </div>
                 <div className="fontsize-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" defaultValue='0' onChange={handleOnchange} id="fontSizeRange" name="fontSizeRange" min="0" max="200" />
+                        <input type="range" defaultValue='1' onChange={handleOnchange} id="fontSizeRange" name="fontSizeRange" min="1" max="200" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='fontSizeValue' defaultValue={value.size? value.size: '1'} />
+                        <input type="number" name='fontSizeValue' defaultValue={value.size} />
                     </div>
                 </div>
             </div>

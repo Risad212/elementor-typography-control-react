@@ -1,7 +1,7 @@
 /*--------- Decoration Data --------------*/ 
 export const decorationData = [
     {
-        title: 'Decoration',
+        title: 'decoration',
         selectData: [
             {
                 innerText: 'default',

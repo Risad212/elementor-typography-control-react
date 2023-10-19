@@ -9,13 +9,14 @@ import Lineheight from '../lineheight/Lineheight';
 import Letterspacing from '../letterspacing/Letterspacing';
 import Wordspacing from '../wordspacing/Wordspacing';
 import './typography.css';
+import Selection from '../selection/Selection';
 
-
+import {decorationData} from '../dummyData/Dummydata';
 
 function typography() {
     const [stateValue,setStateValue] = useState({
         family: '',
-        size: '',
+        size: 1,
         weight: '',
         transform: '',
         style: '',
@@ -74,6 +75,7 @@ function typography() {
                     <Fontstyle stateProps={stateProps}/>
                     {/*------- text decoration control ----------*/}
                     <Textdecoration stateProps={stateProps}/>
+                    {/* <Selection data={decorationData}/> */}
                     {/*------- line height control ----------*/}
                     <Lineheight stateProps={stateProps}/>
                     {/*------- letter spacing control ----------*/}
