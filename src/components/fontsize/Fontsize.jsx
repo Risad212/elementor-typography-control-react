@@ -6,14 +6,29 @@ function Fontsize({stateProps}) {
 
     const handleOnchange = (elem) => {
         const newSize = parseInt(elem.target.value, 10);
-        setValue({
-            ...value,
-            size: newSize.toString(),
-          });
+        if(newSize > 200){
+            setValue({
+                ...value,
+                size: '200',
+              });
+        }
+        else if(newSize == 0){
+            setValue({
+                ...value,
+                size: '1',
+              });
+        }
+        else{
+            setValue({
+                ...value,
+                size: newSize.toString(),
+              });
+             
+        }
     }
 
     useEffect(() => {
-        if(value.size){
+        if(value.size > 1){
             console.log(value.size);
         }
     },[value.size])
@@ -71,7 +86,7 @@ function Fontsize({stateProps}) {
                         <input type="range" defaultValue='1' onChange={handleOnchange} id="fontSizeRange" name="fontSizeRange" min="1" max="200" />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='fontSizeValue' defaultValue={value.size} />
+                        <input type="number" name='fontSizeValue' defaultValue={value.size} value={value.size} onChange={handleOnchange} />
                     </div>
                 </div>
             </div>

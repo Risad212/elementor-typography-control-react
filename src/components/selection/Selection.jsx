@@ -1,29 +1,31 @@
-import { useState } from 'react';
+
+import { useEffect } from 'react';
 import './selection.css';
 
-function Selection({data}) {
-    const {title,selectData} = data[0];
-    
-    const [value,setValue] = useState({
-        decoration: '',
-    })
+function Selection({data,stateProps}) {
+    const {title,selectData,key} = data[0];
+    const {value,setValue} = stateProps;
 
     const handleOnchange = (elem) => {
-        const name = elem.target.name;
         setValue({
             ...value,
-            name: elem.target.value,
+            [key]: elem.target.value,
           });
-          console.log(value.name);
     }
 
-    
+
+    useEffect(() => {
+      if(value[key]){
+        console.log(value[key]);
+      }
+    },[value[key]])
+
     return (
         <>
             <div className="selection-control-feild">
                 <span className="selection-title">{title}</span>
                 <div className="selection-select-wrap">
-                    <select id="selectId" name="decoration" onChange={handleOnchange}>
+                    <select id="selectId" onChange={handleOnchange}>
                         {
                             selectData.map((elem) => {
                                 return(

@@ -11,12 +11,13 @@ import Wordspacing from '../wordspacing/Wordspacing';
 import './typography.css';
 import Selection from '../selection/Selection';
 
-import {decorationData} from '../dummyData/Dummydata';
+import {decorationData,styleData} from '../dummyData/Dummydata';
+
 
 function typography() {
     const [stateValue,setStateValue] = useState({
         family: '',
-        size: 1,
+        size: '1',
         weight: '',
         transform: '',
         style: '',
@@ -25,6 +26,7 @@ function typography() {
         letterSpacing: '',
         wordSpacing: '',
     })
+
 
     const stateProps = {
         value: stateValue,
@@ -72,10 +74,11 @@ function typography() {
                     {/*------- transform control ----------*/}
                     <Transform stateProps={stateProps}/>
                     {/*------- font style control ----------*/}
-                    <Fontstyle stateProps={stateProps}/>
+                    {/* <Fontstyle stateProps={stateProps}/> */}
+                    <Selection data={styleData} stateProps={stateProps}/>
                     {/*------- text decoration control ----------*/}
-                    <Textdecoration stateProps={stateProps}/>
-                    {/* <Selection data={decorationData}/> */}
+                    {/* <Textdecoration stateProps={stateProps}/> */}
+                    <Selection data={decorationData} stateProps={stateProps}/>
                     {/*------- line height control ----------*/}
                     <Lineheight stateProps={stateProps}/>
                     {/*------- letter spacing control ----------*/}

@@ -2,6 +2,7 @@
 export const decorationData = [
     {
         title: 'decoration',
+        key: 'decoration',
         selectData: [
             {
                 innerText: 'default',
@@ -31,6 +32,7 @@ export const decorationData = [
 export const styleData = [
     {
         title: 'style',
+        key: 'style',
         selectData: [
             {
                 innerText: 'Default',
