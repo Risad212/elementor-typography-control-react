@@ -55,10 +55,11 @@ export const styleData = [
 ]
 
 
-/*--------- style Data --------------*/ 
+/*--------- transform Data --------------*/ 
 export const transformData = [
     {
         title: 'transform',
+        key: 'transform',
         selectData: [
             {
                 innerText: 'Default',
@@ -85,10 +86,11 @@ export const transformData = [
 ]
 
 
-/*--------- style Data --------------*/ 
+/*--------- weight Data --------------*/ 
 export const weightData = [
     {
         title: 'weight',
+        key: 'weight',
         selectData: [
             {
                 innerText: '100 (Thin)',

@@ -11,7 +11,7 @@ import Wordspacing from '../wordspacing/Wordspacing';
 import './typography.css';
 import Selection from '../selection/Selection';
 
-import {decorationData,styleData} from '../dummyData/Dummydata';
+import {decorationData,styleData,transformData,weightData} from '../dummyData/Dummydata';
 
 
 function typography() {
@@ -26,7 +26,6 @@ function typography() {
         letterSpacing: '',
         wordSpacing: '',
     })
-
 
     const stateProps = {
         value: stateValue,
@@ -70,14 +69,12 @@ function typography() {
                     {/*------- font size control ----------*/}
                     <Fontsize stateProps={stateProps}/>
                     {/*------- font width control ----------*/}
-                    <Fontweight stateProps={stateProps}/>
+                    <Selection data={weightData} stateProps={stateProps}/>
                     {/*------- transform control ----------*/}
-                    <Transform stateProps={stateProps}/>
+                    <Selection data={transformData} stateProps={stateProps}/>
                     {/*------- font style control ----------*/}
-                    {/* <Fontstyle stateProps={stateProps}/> */}
                     <Selection data={styleData} stateProps={stateProps}/>
                     {/*------- text decoration control ----------*/}
-                    {/* <Textdecoration stateProps={stateProps}/> */}
                     <Selection data={decorationData} stateProps={stateProps}/>
                     {/*------- line height control ----------*/}
                     <Lineheight stateProps={stateProps}/>
