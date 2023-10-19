@@ -49,7 +49,7 @@
     overflow: hidden;
     position: absolute;
     text-align: center;
-    z-index: 2;
+    z-index: 5;
     right: 1px;
     flex-direction: column;
     background: #fff;
@@ -60,7 +60,7 @@
 }
 .letterspacing-control-feild .showUnitSwhitch{
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    height: 122px !important;
+    height: 125px !important;
 }
 .letterspacing-control-feild .units-switcher .switch {
     font-size: 10px;

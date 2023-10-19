@@ -49,7 +49,7 @@
     overflow: hidden;
     position: absolute;
     text-align: center;
-    z-index: 2;
+    z-index: 8;
     right: 1px;
     flex-direction: column;
     background: #fff;
@@ -58,9 +58,9 @@
     transition: .15s;
     height: 27px;
 }
-.showUnitSwhitch{
+.lineheight-control-feild .showUnitSwhitch{
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    height: 122px !important;
+    height: 125px !important;
 }
 .lineheight-control-feild .units-switcher .switch {
     font-size: 10px;
@@ -70,6 +70,7 @@
 .lineheight-control-feild .units-switcher .switch:last-child{
     margin-bottom: 0;
 }
+
 .lineheight-control-feild .lineheight-title {
     font-size: 12px;
     color: #515962;
