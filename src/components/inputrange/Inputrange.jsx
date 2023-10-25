@@ -1,22 +1,24 @@
 import { useEffect } from 'react';
-import './letterspacing.css';
+import './inputrange.css';
 
-function Letterspacing({stateProps}) {
+function Wordspacing({stateProps,data}) {
     const {value,setValue} = stateProps;
-
+    const {key,title,maxValue, defaultValue} = data;
+    
     const handleOnchange = (elem) => {
         setValue({
             ...value,
-            letterSpacing: elem.target.value,
+            [key]: elem.target.value,
+            
           });
+          console.log(key);
     }
 
-    
     useEffect(() => {
-        if(value.letterSpacing){
-            console.log(value.letterSpacing);
+        if(value.key){
+            console.log(value);
         }
-    },[value.letterSpacing])
+    },[value.key])
 
 
     /*--------- device icon toggle function ------------*/
@@ -24,9 +26,9 @@ function Letterspacing({stateProps}) {
     const showDeviceIcon = () => {
         isToggled = !isToggled;
         if (isToggled) {
-            document.querySelector('.letterspacing-head .icon-list').classList.add('showAllDeviceIcon')
+            document.querySelector('.inputRange-head .icon-list').classList.add('showAllDeviceIcon')
         } else {
-            document.querySelector('.letterspacing-head .icon-list').classList.remove('showAllDeviceIcon')
+            document.querySelector('.inputRange-head .icon-list').classList.remove('showAllDeviceIcon')
         }
     }
        /*--------- units toggle function ------------*/
@@ -34,18 +36,18 @@ function Letterspacing({stateProps}) {
     const showUnits = () => {
         isToggledUnits = !isToggledUnits;
         if (isToggledUnits) {
-            document.querySelector('.letterspacing-head .units-switcher').classList.add('showUnitSwhitch')
+            document.querySelector('.inputRange-head .units-switcher').classList.add('showUnitSwhitch')
         } else {
-            document.querySelector('.letterspacing-head .units-switcher').classList.remove('showUnitSwhitch')
+            document.querySelector('.inputRange-head .units-switcher').classList.remove('showUnitSwhitch')
         }
     }
     
     return (
         <>
-            <div className="letterspacing-control-feild">
-                <div className="letterspacing-head">
+            <div className="inputRange-control-feild">
+                <div className="inputRange-head">
                     <div className="left">
-                        <span className="letterspacing-title">Letter Spacing</span>
+                        <span className="inputRange-title">{title}</span>
                         <div className='icon-list'>
                             <button className="item" onClick={() => {
                                 showDeviceIcon()
@@ -65,12 +67,12 @@ function Letterspacing({stateProps}) {
                         </div>
                     </div>
                 </div>
-                <div className="letterspacing-nUiTouch">
+                <div className="inputRange-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" onChange={handleOnchange} defaultValue='30' id="letterspacingRange" name="letterSpacing" min="0" max="100" />
+                        <input type="range" onChange={handleOnchange} defaultValue={defaultValue} id="inputRangeRange" name="inputRange" min="0" max={maxValue} />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='letterspacingValue' defaultValue={value.letterSpacing? value.letterSpacing: ''} />
+                        <input type="number" name='inputRangeValue' defaultValue={value[key]? value[key]: ''} />
                     </div>
                 </div>
             </div>
@@ -78,4 +80,4 @@ function Letterspacing({stateProps}) {
     );
 }
 
-export default Letterspacing;
+export default Wordspacing;

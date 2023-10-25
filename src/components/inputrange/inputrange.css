@@ -1,4 +1,4 @@
-.wordspacing-control-feild {
+.inputRange-control-feild {
     padding: 0 20px 15px;
     display: flex;
     align-items: center;
@@ -7,14 +7,14 @@
     flex-direction: column;
 }
 
-.wordspacing-control-feild .wordspacing-head {
+.inputRange-control-feild .inputRange-head {
     position: relative;
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.wordspacing-control-feild .wordspacing-head .icon-list {
+.inputRange-control-feild .inputRange-head .icon-list {
     padding: 7px 8px;
     padding-bottom: 0;
     transition: .15s;
@@ -33,7 +33,7 @@
     height: 95px !important;
 }
 
-.wordspacing-control-feild .wordspacing-head .icon-list .item {
+.inputRange-control-feild .inputRange-head .icon-list .item {
     font-size: 12px;
     cursor: pointer;
     height: 2.5em;
@@ -44,7 +44,7 @@
 }
 
 /*------- Unites switcher --------*/
-.wordspacing-control-feild .wordspacing-head .right .units-switcher {
+.inputRange-control-feild .inputRange-head .right .units-switcher {
     display: flex;
     overflow: hidden;
     position: absolute;
@@ -62,31 +62,31 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     height: 122px !important;
 }
-.wordspacing-control-feild .units-switcher .switch {
+.inputRange-control-feild .units-switcher .switch {
     font-size: 10px;
     margin-bottom: 15px;
     cursor: pointer;
 }
-.wordspacing-control-feild .units-switcher .switch:last-child{
+.inputRange-control-feild .units-switcher .switch:last-child{
     margin-bottom: 0;
 }
-.wordspacing-control-feild .wordspacing-title {
+.inputRange-control-feild .inputRange-title {
     font-size: 12px;
     color: #515962;
     max-width: 60%;
     margin-inline-end: 5px;
 }
 
-.wordspacing-control-feild .wordspacing-select-wrap {
+.inputRange-control-feild .inputRange-select-wrap {
     margin-inline-start: auto;
 }
 
-.wordspacing-control-feild .wordspacing-select-wrap {
+.inputRange-control-feild .inputRange-select-wrap {
     max-width: 400px;
     width: 52%;
 }
 
-.wordspacing-control-feild .wordspacing-select-wrap select {
+.inputRange-control-feild .inputRange-select-wrap select {
     max-width: 100%;
     border-color: #d5d8dc;
     height: 27px;
@@ -99,7 +99,7 @@
     position: relative;
 }
 
-.wordspacing-control-feild .wordspacing-select-wrap select::after {
+.inputRange-control-feild .inputRange-select-wrap select::after {
     font-family: FontAwesome;
     content: "\e8ad";
     font-size: 12px;
@@ -110,21 +110,21 @@
     pointer-events: none;
 }
 
-.wordspacing-nUiTouch{
+.inputRange-nUiTouch{
     display: flex;
     align-items: center;
     margin-top: 10px;
     justify-content: space-between;
 }
 
-.wordspacing-nUiTouch .input-value{
+.inputRange-nUiTouch .input-value{
     width: 21%;
     min-width: 54px;
     margin-inline-start: 12px;
     transition: width .3s ease-in-out;
 }
 
-.wordspacing-nUiTouch .input-value input{
+.inputRange-nUiTouch .input-value input{
     padding: 5px;
     color: #515962;
     border-radius: 3px;
@@ -137,14 +137,14 @@
     outline: none;
 }
 
-.wordspacing-nUiTouch .input-rang{
+.inputRange-nUiTouch .input-rang{
     width: 79%;
     display: flex;
 }
 
 
 /*********** Baseline, reset styles ***********/
-.wordspacing-nUiTouch .input-rang input[type="range"] {
+.inputRange-nUiTouch .input-rang input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
     background: transparent;
@@ -153,20 +153,20 @@
   }
   
   /* Removes default focus */
-  .wordspacing-nUiTouch .input-rang input[type="range"]:focus {
+  .inputRange-nUiTouch .input-rang input[type="range"]:focus {
     outline: none;
   }
   
   /******** Chrome, Safari, Opera and Edge Chromium styles ********/
   /* slider track */
-  .wordspacing-nUiTouch .input-rang input[type="range"]::-webkit-slider-runnable-track {
+  .inputRange-nUiTouch .input-rang input[type="range"]::-webkit-slider-runnable-track {
     background-color: #d5d8dc;
     height: 4px;
     border-radius: 5px;
   }
   
   /* slider thumb */
-  .wordspacing-nUiTouch .input-rang input[type="range"]::-webkit-slider-thumb {
+  .inputRange-nUiTouch .input-rang input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     margin-top: -5px; /* Centers thumb on the track */
@@ -179,14 +179,14 @@
   
   /*********** Firefox styles ***********/
   /* slider track */
-  .wordspacing-nUiTouch .input-rang input[type="range"]::-moz-range-track {
+  .inputRange-nUiTouch .input-rang input[type="range"]::-moz-range-track {
     background-color: #fff;
     border-radius: 0.5rem;
     height: 0.5rem;
   }
   
   /* slider thumb */
-  .wordspacing-nUiTouch .input-rang input[type="range"]::-moz-range-thumb {
+  .inputRange-nUiTouch .input-rang input[type="range"]::-moz-range-thumb {
     background-color: #fff;
     border: none; /*Removes extra border that FF applies*/
     border-radius: 0.5rem;

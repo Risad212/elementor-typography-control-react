@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import Fontfamily from '../fontfamily/fontFamily';
 import Fontsize from '../fontsize/Fontsize';
-import Lineheight from '../lineheight/Lineheight';
-import Letterspacing from '../letterspacing/Letterspacing';
-import Wordspacing from '../wordspacing/Wordspacing';
 import Selection from '../selection/Selection';
-import {decorationData,styleData,transformData,weightData} from '../dummyData/Dummydata';
+import {decorationData,styleData,transformData,weightData,wordSpacingData,letterSpacingData, lineHeightData} from '../dummyData/Dummydata';
 import './typography.css';
 
+import Inputrange from '../inputrange/Inputrange';
 
 
 function typography() {
@@ -28,16 +26,6 @@ function typography() {
         setValue: setStateValue
     }
 
-    let isToggled = false;
-    const toggle = () => {
-        isToggled = !isToggled;
-        if (isToggled) {
-            document.querySelector('.typography-control').classList.add('showTypography')
-        } else {
-            document.querySelector('.typography-control').classList.remove('showTypography')
-        }
-    }
-
     return (
         <>
             <div className="main-control">
@@ -47,9 +35,7 @@ function typography() {
                     </div>
                     <div className="main-control-icon">
                         <span className='icon'><i class="fa-solid fa-globe"></i></span>
-                        <span className="icon" onClick={() => {
-                            toggle()
-                        }}><i class="fa-solid fa-pen-to-square"></i></span>
+                        <span className="icon"><i class="fa-solid fa-pen-to-square"></i></span>
                     </div>
                 </div>
                 <div className="typography-control">
@@ -73,11 +59,11 @@ function typography() {
                     {/*------- text decoration control ----------*/}
                     <Selection data={decorationData} stateProps={stateProps}/>
                     {/*------- line height control ----------*/}
-                    <Lineheight stateProps={stateProps}/>
+                    <Inputrange stateProps={stateProps} data={lineHeightData}/>
                     {/*------- letter spacing control ----------*/}
-                    <Letterspacing stateProps={stateProps}/>
+                    <Inputrange stateProps={stateProps} data={letterSpacingData}/>
                     {/*------- word spacing control ----------*/}
-                    <Wordspacing stateProps={stateProps}/>
+                    <Inputrange stateProps={stateProps} data={wordSpacingData} />
                 </div>
             </div>
         </>

@@ -146,14 +146,25 @@ export const weightData = [
 
 
 
-export const fontSizeData = {
-    title: 'Size',
-    key: 'size',
-    maxValue: '200'
-}
 
 export const lineHeightData = {
     title: 'Line-Height',
     key: 'lineHeight',
-    maxValue: '100'
+    maxValue: '100',
+    defaultValue: 0,
+}
+
+export const letterSpacingData = {
+    title: 'Letter Spacing',
+    key: 'letterSpacing',
+    maxValue: '100',
+    defaultValue: 30,
+}
+
+
+export const wordSpacingData = {
+    title: 'Word Spacing',
+    key: 'wordSpacing',
+    maxValue: '100',
+    defaultValue: 0,
 }
