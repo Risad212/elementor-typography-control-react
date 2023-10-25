@@ -1,3 +1,5 @@
+/*[============== selection data  ==============]*/
+
 /*--------- Decoration Data --------------*/ 
 export const decorationData = [
     {
@@ -27,7 +29,6 @@ export const decorationData = [
         ]
     }
 ]
-
 /*--------- style Data --------------*/ 
 export const styleData = [
     {
@@ -53,7 +54,6 @@ export const styleData = [
         ]
     }
 ]
-
 
 /*--------- transform Data --------------*/ 
 export const transformData = [
@@ -84,7 +84,6 @@ export const transformData = [
         ]
     }
 ]
-
 
 /*--------- weight Data --------------*/ 
 export const weightData = [
@@ -144,8 +143,16 @@ export const weightData = [
     }
 ]
 
+/*[============== input range data  ==============]*/
 
 
+export const fontSizeData = {
+    title: 'Size',
+    key: 'size',
+    maxValue: '200',
+    defaultValue: 1,
+    minValue: 1,
+}
 
 export const lineHeightData = {
     title: 'Line-Height',
@@ -168,3 +175,5 @@ export const wordSpacingData = {
     maxValue: '100',
     defaultValue: 0,
 }
+
+
