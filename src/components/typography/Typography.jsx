@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Fontfamily from '../fontfamily/fontFamily';
 import Fontsize from '../fontsize/Fontsize';
 import Selection from '../selection/Selection';
-import {decorationData,styleData,transformData,weightData,wordSpacingData,letterSpacingData, lineHeightData} from '../dummyData/Dummydata';
+import Inputrange from '../inputrange/Inputrange';
+import {decorationData,styleData,transformData,weightData,wordSpacingData,letterSpacingData, lineHeightData,fontFamilyData, fontSizeData} from '../dummyData/Dummydata';
 import './typography.css';
 
-import Inputrange from '../inputrange/Inputrange';
+
 
 
 function typography() {
@@ -46,10 +46,10 @@ function typography() {
                             <button class="e-control-tool"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                    {/*------- font control ----------*/}
-                    <Fontfamily stateProps={stateProps}/>
+                    {/*------- font family control ----------*/}
+                    <Selection stateProps={stateProps} data={fontFamilyData}/>
                     {/*------- font size control ----------*/}
-                    <Fontsize stateProps={stateProps}/>
+                    <Fontsize stateProps={stateProps} />
                     {/*------- font width control ----------*/}
                     <Selection data={weightData} stateProps={stateProps}/>
                     {/*------- transform control ----------*/}

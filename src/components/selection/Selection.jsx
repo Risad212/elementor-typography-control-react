@@ -29,7 +29,7 @@ function Selection({data,stateProps}) {
                         {
                             selectData.map((elem) => {
                                 return(
-                                    <option >{elem.innerText}</option>
+                                    <option value={elem.value} >{elem.innerText}</option>
                                 )
                             })
                         }

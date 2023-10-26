@@ -1,55 +1,56 @@
 import { useEffect, useState } from 'react';
 import './inputrange.css';
 
-function Inputrange({stateProps,data}) {
-    const {value,setValue} = stateProps;
-    const {key,title,maxValue, defaultValue} = data;
-    const [style,setStyle] = useState();
+function Inputrange({ stateProps, data }) {
+    const { value, setValue } = stateProps;
+    const { key, title, maxValue, defaultValue } = data;
 
     const handleOnchange = (elem) => {
         setValue({
             ...value,
             [key]: elem.target.value,
-            
-          });
+
+        });
     }
 
     useEffect(() => {
-        if(value.key){
-            console.log(value);
+        if (value[key]) {
+            console.log(value[key]);
         }
-    },[value.key])
-
+    }, [value[key]])
 
 
     /*--------- device icon toggle function ------------*/
-    let isToggled = false;
+    const [isToggled, setIsToggled] = useState(true);
+    const [styleDevice, setStyleDevice] = useState();
+    const [styleUnit,setStyleUnit] = useState();
+
     const showDeviceIcon = () => {
-        isToggled = !isToggled;
+        setIsToggled(!isToggled);
         if (isToggled) {
-            setStyle('95px')
-        }else{
-            setStyle('')
-        }
-    }
-       /*--------- units toggle function ------------*/
-    let isToggledUnits = false;
-    const showUnits = () => {
-        isToggledUnits = !isToggledUnits;
-        if (isToggledUnits) {
-            document.querySelector('.inputRange-head .units-switcher').classList.add('showUnitSwhitch')
+            setStyleDevice('90px');
         } else {
-            document.querySelector('.inputRange-head .units-switcher').classList.remove('showUnitSwhitch')
+            setStyleDevice('27px');
+        }
+    };
+    
+    /*--------- units toggle function ------------*/
+    const showUnits = () => {
+        setIsToggled(!isToggled);
+        if (isToggled) {
+            setStyleUnit('122px');
+        } else {
+            setStyleUnit('27px');
         }
     }
-    
+
     return (
         <>
             <div className="inputRange-control-feild">
                 <div className="inputRange-head">
                     <div className="left">
                         <span className="inputRange-title">{title}</span>
-                        <div className='icon-list' style={{height: `${style}`}}>
+                        <div className='icon-list' style={{ height: `${styleDevice}` }}>
                             <button className="item" onClick={() => {
                                 showDeviceIcon()
                             }}><i class="fa-solid fa-desktop"></i></button>
@@ -58,12 +59,13 @@ function Inputrange({stateProps,data}) {
                         </div>
                     </div>
                     <div className="right">
-                        <div className="units-switcher" onClick={() => {
+                        <div className="units-switcher" style={{height: `${styleUnit}`}} onClick={() => {
                             showUnits();
                         }}>
                           <span className="switch">px</span>
                           <span className="switch">em</span>
                           <span className="switch">rem</span>
+                          {title == 'size'? <span className="switch">vw</span>: ''}
                           <span className='switch'><i class="fa-solid fa-pen"></i></span> 
                         </div>
                     </div>
@@ -73,7 +75,7 @@ function Inputrange({stateProps,data}) {
                         <input type="range" onChange={handleOnchange} defaultValue={defaultValue} id="inputRangeRange" name="inputRange" min="0" max={maxValue} />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='inputRangeValue' defaultValue={value[key]? value[key]: ''} />
+                        <input type="number" name='inputRangeValue' defaultValue={value[key] ? value[key] : ''} />
                     </div>
                 </div>
             </div>
