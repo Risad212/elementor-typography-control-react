@@ -13,7 +13,6 @@ function Selection({data,stateProps}) {
           });
     }
 
-
     useEffect(() => {
       if(value[key]){
         console.log(value[key]);

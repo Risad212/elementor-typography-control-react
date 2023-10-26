@@ -1,17 +1,14 @@
 import { useState } from 'react';
-import Fontsize from '../fontsize/Fontsize';
 import Selection from '../selection/Selection';
 import Inputrange from '../inputrange/Inputrange';
 import {decorationData,styleData,transformData,weightData,wordSpacingData,letterSpacingData, lineHeightData,fontFamilyData, fontSizeData} from '../dummyData/Dummydata';
 import './typography.css';
 
 
-
-
 function typography() {
     const [stateValue,setStateValue] = useState({
         family: '',
-        size: '1',
+        size: '',
         weight: '',
         transform: '',
         style: '',
@@ -49,7 +46,7 @@ function typography() {
                     {/*------- font family control ----------*/}
                     <Selection stateProps={stateProps} data={fontFamilyData}/>
                     {/*------- font size control ----------*/}
-                    <Fontsize stateProps={stateProps} />
+                    <Inputrange data={fontSizeData} stateProps={stateProps}/>
                     {/*------- font width control ----------*/}
                     <Selection data={weightData} stateProps={stateProps}/>
                     {/*------- transform control ----------*/}

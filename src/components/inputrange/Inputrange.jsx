@@ -3,7 +3,7 @@ import './inputrange.css';
 
 function Inputrange({ stateProps, data }) {
     const { value, setValue } = stateProps;
-    const { key, title, maxValue, defaultValue } = data;
+    const { key, title, maxValue, defaultValue, minValue } = data;
 
     const handleOnchange = (elem) => {
         setValue({
@@ -65,17 +65,17 @@ function Inputrange({ stateProps, data }) {
                           <span className="switch">px</span>
                           <span className="switch">em</span>
                           <span className="switch">rem</span>
-                          {title == 'size'? <span className="switch">vw</span>: ''}
+                          {key == 'size'? <span className="switch">vw</span>: ''}
                           <span className='switch'><i class="fa-solid fa-pen"></i></span> 
                         </div>
                     </div>
                 </div>
                 <div className="inputRange-nUiTouch">
                     <div className="input-rang">
-                        <input type="range" onChange={handleOnchange} defaultValue={defaultValue} id="inputRangeRange" name="inputRange" min="0" max={maxValue} />
+                        <input type="range" onChange={handleOnchange} defaultValue={defaultValue} id="inputRangeRange" name="inputRange" min={minValue} max={maxValue} />
                     </div>
                     <div className="input-value">
-                        <input type="number" name='inputRangeValue' defaultValue={value[key] ? value[key] : ''} />
+                        <input type="number" name='inputRangeValue'  defaultValue={value[key] ? value[key] : ''} />
                     </div>
                 </div>
             </div>

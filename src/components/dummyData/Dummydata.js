@@ -1663,6 +1663,7 @@ export const lineHeightData = {
     key: 'lineHeight',
     maxValue: '100',
     defaultValue: 0,
+    minValue: 0,
 }
 
 export const letterSpacingData = {
@@ -1670,13 +1671,14 @@ export const letterSpacingData = {
     key: 'letterSpacing',
     maxValue: '100',
     defaultValue: 30,
+    minValue: 0,
 }
-
 
 export const wordSpacingData = {
     title: 'Word Spacing',
     key: 'wordSpacing',
     maxValue: '100',
     defaultValue: 0,
+    minValue: 0,
 }
 
