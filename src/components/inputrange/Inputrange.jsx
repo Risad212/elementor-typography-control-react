@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './inputrange.css';
 
-function Wordspacing({stateProps,data}) {
+function Inputrange({stateProps,data}) {
     const {value,setValue} = stateProps;
     const {key,title,maxValue, defaultValue} = data;
-    
+    const [style,setStyle] = useState();
+
     const handleOnchange = (elem) => {
         setValue({
             ...value,
             [key]: elem.target.value,
             
           });
-          console.log(key);
     }
 
     useEffect(() => {
@@ -21,14 +21,15 @@ function Wordspacing({stateProps,data}) {
     },[value.key])
 
 
+
     /*--------- device icon toggle function ------------*/
     let isToggled = false;
     const showDeviceIcon = () => {
         isToggled = !isToggled;
         if (isToggled) {
-            document.querySelector('.inputRange-head .icon-list').classList.add('showAllDeviceIcon')
-        } else {
-            document.querySelector('.inputRange-head .icon-list').classList.remove('showAllDeviceIcon')
+            setStyle('95px')
+        }else{
+            setStyle('')
         }
     }
        /*--------- units toggle function ------------*/
@@ -48,7 +49,7 @@ function Wordspacing({stateProps,data}) {
                 <div className="inputRange-head">
                     <div className="left">
                         <span className="inputRange-title">{title}</span>
-                        <div className='icon-list'>
+                        <div className='icon-list' style={{height: `${style}`}}>
                             <button className="item" onClick={() => {
                                 showDeviceIcon()
                             }}><i class="fa-solid fa-desktop"></i></button>
@@ -80,4 +81,4 @@ function Wordspacing({stateProps,data}) {
     );
 }
 
-export default Wordspacing;
+export default Inputrange;

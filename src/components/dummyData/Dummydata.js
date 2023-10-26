@@ -1,5 +1,15 @@
 /*[============== selection data  ==============]*/
+/*--------- Family Data --------------*/ 
+const fontFamilyData = [
+    {
+        title: 'Family',
+        key: 'family',
+        selectData: [
+            {}
+        ]
 
+    }
+]
 /*--------- Decoration Data --------------*/ 
 export const decorationData = [
     {
@@ -145,7 +155,6 @@ export const weightData = [
 
 /*[============== input range data  ==============]*/
 
-
 export const fontSizeData = {
     title: 'Size',
     key: 'size',
@@ -175,5 +184,4 @@ export const wordSpacingData = {
     maxValue: '100',
     defaultValue: 0,
 }
-
 
